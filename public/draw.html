@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DrawCord</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div id="settings">
+      <div class="setting">
+        <input type="color" id="color" />
+      </div>
+      <div class="setting">
+        <input type="number" id="width" value="10" />
+      </div>
+      <div class="setting">
+        <input type="button" id="clear" value="Clear" />
+      </div>
+    </div>
+    <canvas></canvas>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/qs.min.js"></script>
+    <script src="/js/draw.js"></script>
+  </body>
+</html>

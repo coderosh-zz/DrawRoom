@@ -1,5 +1,39 @@
-<script src="/socket.io/socket.io.js"></script>
-
-<script>
-  const socket = io()
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DrawCord</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="centered">
+      <div class="box">
+        <div class="box-title">DrawCord</div>
+        <form action="/draw.html">
+          <div class="form-group">
+            <label for="room">Room</label>
+            <input
+              type="text"
+              name="room"
+              id="room"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <button>Join</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

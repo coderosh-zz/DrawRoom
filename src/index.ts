@@ -1,6 +1,6 @@
 import path from 'path'
 import express from 'express'
-import socketio from 'socket.io'
+import init from './socket'
 
 const app = express()
 
@@ -11,8 +11,10 @@ const server = app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`)
 })
 
-const io = socketio(server)
+const io = init(server)
 
-io.on('connection', socket => {
-  console.log(socket.id)
+io.on('connection', (socket) => {
+  socket.on('move', (data) => {
+    io.emit('draw', data)
+  })
 })
