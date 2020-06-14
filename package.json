@@ -1,8 +1,8 @@
 {
-  "name": "canvas-drawing",
+  "name": "draw-room",
   "version": "1.0.0",
   "description": "Real time drawing app",
-  "main": "index.js",
+  "main": "build/index.js",
   "author": "Roshan Acharya",
   "license": "MIT",
   "scripts": {

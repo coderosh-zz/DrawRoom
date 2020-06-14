@@ -55,7 +55,7 @@ body {
 .centered .box {
   padding: 10px;
   border: 1px solid #5c595962;
-  background-color: #eeeeee;
+  background-color: #c2c0c0;
   max-width: 300px;
   width: 90%;
 }
@@ -79,4 +79,42 @@ body {
   display: block;
   width: 100%;
   padding: 5px 2px;
+  border: none;
+}
+
+.centered .box button {
+  margin-top: 20px;
+}
+
+.centered .box button:hover {
+  background-color: rgb(31, 31, 31);
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+#roomData {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgb(12, 10, 7);
+  user-select: none;
+  pointer-events: none;
+  color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #000;
+  font-size: 15px;
+}
+
+.users {
+  list-style: none;
+}
+
+#roomData .room-name {
+  font-size: 20px;
+  text-align: center;
+  border-bottom: 4px solid #000;
+  padding: 5px 10px;
+  background: #111;
+  border: 1px solid #eee;
+  margin-bottom: 10px;
 }
