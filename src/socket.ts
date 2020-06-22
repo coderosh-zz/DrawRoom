@@ -21,7 +21,8 @@ const init = (server: any) => {
         .emit('notification', `${user!.username} joined the room`)
 
       socket.on('move', (data) => {
-        io.to(user!.room).emit('draw', data)
+        // io.to(user!.room).emit('draw', data)
+        socket.broadcast.to(user!.room).emit('draw', data)
       })
 
       io.to(user!.room).emit('roomData', {
