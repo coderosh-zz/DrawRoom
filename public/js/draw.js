@@ -94,9 +94,10 @@ function mouseMoved(e) {
   props.color = document.querySelector('#color').value
   props.width = document.querySelector('#width').value
 
-  let cBounds = canvas.getBoundingClientRect()
-  props.pX -= cBounds.x
-  props.pY -= cBounds.y
+  // let cBounds = canvas.getBoundingClientRect()
+  // props.pX -= cBounds.x
+  // props.pY -= cBounds.y
+
   socket.emit('move', props)
   draw(props)
 
