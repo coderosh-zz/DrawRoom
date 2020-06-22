@@ -98,6 +98,7 @@ function mouseMoved(e) {
   props.pX -= cBounds.x
   props.pY -= cBounds.y
   socket.emit('move', props)
+  draw(props)
 
   props.pX = props.x
   props.pY = props.y
