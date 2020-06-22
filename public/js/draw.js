@@ -63,8 +63,8 @@ canvas.addEventListener('touchstart', (e) => {
   mouseMoved(e)
 })
 
-canvas.addEventListener('mousemove', mouseMoved)
-canvas.addEventListener('touchmove', mouseMoved)
+canvas.addEventListener('mousemove', throttle(mouseMoved))
+canvas.addEventListener('touchmove', throttle(mouseMoved))
 
 canvas.addEventListener('mouseup', function (e) {
   isDrawing = false
@@ -112,3 +112,16 @@ document.querySelector('#clear').addEventListener('click', () => {
 document.querySelector('#settings').addEventListener('click', () => {
   isDrawing = false
 })
+
+function throttle(callback, delay = 10) {
+  let previousCall = new Date().getTime()
+  return function () {
+    let time = new Date().getTime()
+
+    if (time - previousCall >= delay) {
+      previousCall = time
+      if (isDrawing) console.log('Hey')
+      callback.apply(null, arguments)
+    }
+  }
+}
